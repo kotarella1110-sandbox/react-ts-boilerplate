@@ -1,7 +1,11 @@
 {
   "linters": {
     "**/*.ts{,x}": [
-      "yarn lint --fix",
+      "yarn lint:js --fix",
+      "git add"
+    ],
+    "**/*.{css,scss,html}": [
+      "yarn lint:css --fix",
       "git add"
     ]
   },
