@@ -1,5 +1,9 @@
 {
   "linters": {
+    "docs/**": [
+      "yarn lint:text --fix",
+      "git add"
+    ],
     "**/*.ts{,x}": [
       "yarn lint:js --fix",
       "git add"
