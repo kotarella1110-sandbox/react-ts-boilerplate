@@ -1,0 +1,12 @@
+{
+  "linters": {
+    "**/*.ts{,x}": [
+      "yarn lint --fix",
+      "git add"
+    ]
+  },
+  "ignore": [
+    "/config/**/*.js",
+    "/node_modules/**/*.ts"
+  ]
+}
