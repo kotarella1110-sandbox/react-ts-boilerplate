@@ -13,6 +13,7 @@
     "test": "react-scripts-ts test --env=jsdom",
     "eject": "react-scripts-ts eject",
     "lint": "yarn lint lint:text && yarn lint:js && yarn lint:css",
+    "lint:fix": "concurrently 'yarn lint:text --fix' 'yarn lint:js --fix' 'yarn lint:css --fix'",
     "lint:text": "textlint 'docs/**'",
     "lint:js": "tslint 'src/**/*.ts{,x}'",
     "lint:css": "stylelint 'src/**/*.{css,scss}' './public/index.html'"
@@ -22,6 +23,7 @@
     "@types/node": "^10.5.2",
     "@types/react": "^16.4.6",
     "@types/react-dom": "^16.0.6",
+    "concurrently": "^3.6.0",
     "husky": "^1.0.0-rc.13",
     "lint-staged": "^7.2.0",
     "prettier": "^1.13.7",
