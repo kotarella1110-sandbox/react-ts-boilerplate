@@ -11,6 +11,10 @@
     "**/*.{css,scss,html}": [
       "yarn lint:css --fix",
       "git add"
+    ],
+    "**/*.test.ts{,x}": [
+      "yarn test:coverage",
+      "git add"
     ]
   },
   "ignore": [
