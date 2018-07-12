@@ -13,7 +13,7 @@
     "test": "react-scripts-ts test --env=jsdom",
     "test:coverage": "yarn test --coverage",
     "eject": "react-scripts-ts eject",
-    "lint": "yarn lint lint:text && yarn lint:js && yarn lint:css",
+    "lint": "yarn lint:text && yarn lint:js && yarn lint:css",
     "lint:fix": "concurrently 'yarn lint:text --fix' 'yarn lint:js --fix' 'yarn lint:css --fix'",
     "lint:text": "textlint 'docs/**'",
     "lint:js": "tslint 'src/**/*.ts{,x}'",
