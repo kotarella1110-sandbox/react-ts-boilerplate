@@ -2,23 +2,23 @@
 
 exports[`Storyshots App Group|App Welcome to Storybook 1`] = `
 <div
-  className="App"
+  className="sc-bdVaJa khUSez"
 >
-  <header
-    className="App-header"
+  <div
+    className="sc-htpNat dzpwEk"
   >
     <img
       alt="logo"
-      className="App-logo"
+      className="sc-bwzfXH cXOhPZ"
     />
     <h1
-      className="App-title"
+      className="sc-bxivhb dtecpl"
     >
       Welcome to React
     </h1>
-  </header>
+  </div>
   <p
-    className="App-intro"
+    className="sc-ifAKCX dhqEBU"
   >
     To get started, edit 
     <code>
