@@ -1,7 +1,16 @@
-import { configure } from '@storybook/react';
+import { configure, setAddon } from '@storybook/react';
+import '@storybook/addon-console';
+import { setOptions } from '@storybook/addon-options/preview';
+import JSXAddon from 'storybook-addon-jsx';
 
-// automatically import all files ending in *.stories.js
-const req = require.context('../src', true, /.stories.js$/);
+setOptions({
+  hierarchySeparator: /\//,
+  hierarchyRootSeparator: /\|/,
+});
+
+setAddon(JSXAddon);
+
+const req = require.context('../src', true, /.stories.tsx$/);
 function loadStories() {
   req.keys().forEach(filename => req(filename));
 }
