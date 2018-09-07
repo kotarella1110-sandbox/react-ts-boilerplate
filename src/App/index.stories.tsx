@@ -9,7 +9,7 @@ import App from '../App';
 storiesOf('App Group|App', module)
   .addDecorator((story, context) =>
     withInfo(`
-      description or documentation about my component, supports markdown
+      description or documentation about App component, supports markdown
       ~~~js
       <App />
       ~~~
@@ -19,5 +19,5 @@ storiesOf('App Group|App', module)
   .addDecorator(withKnobs)
   .addWithJSX(
     'Welcome to Storybook',
-    withNotes('Note about App component, supports markdown')(() => <App />)
+    withNotes('note about App component, supports markdown')(() => <App />)
   );

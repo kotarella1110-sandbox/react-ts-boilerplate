@@ -9,6 +9,7 @@
     ]
   },
   "rules": {
-    "prettier": true
+    "prettier": true,
+    "import-name": false
   }
 }
