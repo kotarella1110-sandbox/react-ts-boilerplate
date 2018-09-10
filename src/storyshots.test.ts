@@ -1,7 +1,4 @@
-import initStoryshots, {
-  multiSnapshotWithOptions,
-} from '@storybook/addon-storyshots';
+import initStoryshots from '@storybook/addon-storyshots';
+import 'jest-styled-components';
 
-initStoryshots({
-  test: multiSnapshotWithOptions({}),
-});
+initStoryshots({});
