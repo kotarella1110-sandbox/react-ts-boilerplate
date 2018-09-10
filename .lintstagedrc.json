@@ -1,11 +1,13 @@
 {
   "linters": {
     "docs/**": [
+      "yarn lint:text",
       "yarn lint:text --fix",
       "git add"
     ],
     "**/*.ts{,x}": [
       "yarn lint:js --fix",
+      "yarn lint:sc",
       "git add"
     ],
     "**/*.{css,scss,html}": [
@@ -13,7 +15,7 @@
       "git add"
     ],
     "**/*.test.ts{,x}": [
-      "yarn test:coverage",
+      "yarn coverage",
       "git add"
     ]
   },
