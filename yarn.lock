@@ -9252,6 +9252,12 @@ react-split-pane@^0.1.77:
     react-lifecycles-compat "^3.0.4"
     react-style-proptype "^3.0.0"
 
+react-stubber@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/react-stubber/-/react-stubber-1.0.0.tgz#41ee2cac72d4d4fd70a63896da98e13739b84628"
+  dependencies:
+    babel-runtime "^6.5.0"
+
 react-style-proptype@^3.0.0:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/react-style-proptype/-/react-style-proptype-3.2.1.tgz#7cfeb9b87ec7ab9dcbde9715170ed10c11fb86aa"

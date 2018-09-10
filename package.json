@@ -63,6 +63,7 @@
     "react-app-rewire-styled-components-typescript": "^1.0.1",
     "react-app-rewired": "^1.6.2",
     "react-docgen-typescript-webpack-plugin": "^1.1.0",
+    "react-stubber": "^1.0.0",
     "react-test-renderer": "^16.4.1",
     "storybook-addon-jsx": "^5.4.0",
     "storybook-addon-smart-knobs": "^3.3.1",
