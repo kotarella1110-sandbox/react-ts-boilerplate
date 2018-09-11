@@ -27,21 +27,41 @@ const rewireStylelint = (options = {}) => (config, env) => {
   return config;
 };
 
-module.exports = compose(
-  rewireStyledComponentsTypescriptPlugin,
-  rewireStyledComponents,
-  // rewireTslint({
-  //   emitErrors: false,
-  //   fix: true,
-  // }),
-  rewireStylelint({
-    files: [
-      'public/**/*.css',
-      'public/index.html',
+module.exports.webpack = () => {
+  compose(
+    rewireStyledComponentsTypescriptPlugin,
+    rewireStyledComponents,
+    // rewireTslint({
+    //   emitErrors: false,
+    //   fix: true,
+    // }),
+    rewireStylelint({
+      files: [
+        'public/**/*.css',
+        'public/index.html',
+      ],
+      fix: true,
+    }),
+    rewireStylelint({
+      files: ['src/**/*.ts{,x}'],
+    }),
+  );
+ }
+
+module.exports.jest = (config) => {
+  config.globals['ts-jest'].babelConfig = {
+    presets: [
+      'react-app',
     ],
-    fix: true,
-  }),
-  rewireStylelint({
-    files: ['src/**/*.ts{,x}'],
-  }),
-);
+    plugins: [
+      [
+        'styled-components',
+        {
+          displayName: true,
+          fileName: false,
+        },
+      ],
+    ],
+  };
+  return config;
+}
