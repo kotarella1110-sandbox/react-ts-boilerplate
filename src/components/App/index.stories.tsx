@@ -6,7 +6,7 @@ import { withNotes } from '@storybook/addon-notes';
 import { withInfo } from '@storybook/addon-info';
 import App from '../App';
 
-storiesOf('App Group|App', module)
+storiesOf('App Group/App', module)
   .addDecorator((story, context) =>
     withInfo(`
       description or documentation about App component, supports markdown

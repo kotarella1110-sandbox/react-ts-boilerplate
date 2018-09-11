@@ -7,8 +7,7 @@ import JSXAddon from 'storybook-addon-jsx';
 setStubbingMode(true);
 
 setOptions({
-  hierarchySeparator: /\//,
-  hierarchyRootSeparator: /\|/,
+  name: 'React TypeScript Boilerplate'
 });
 
 setAddon(JSXAddon);
