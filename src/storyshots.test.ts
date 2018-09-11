@@ -1,7 +1,14 @@
-import initStoryshots from '@storybook/addon-storyshots';
+import initStoryshots, {
+  multiSnapshotWithOptions,
+} from '@storybook/addon-storyshots';
 import { setStubbingMode } from 'react-stubber';
-import 'jest-styled-components';
+import styleSheetSerializer from 'jest-styled-components/src/styleSheetSerializer';
+import { addSerializer } from 'jest-specific-snapshot';
 
 setStubbingMode(true);
 
-initStoryshots({});
+addSerializer(styleSheetSerializer);
+
+initStoryshots({
+  test: multiSnapshotWithOptions({}),
+});
