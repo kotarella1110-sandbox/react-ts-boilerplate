@@ -1,6 +1,6 @@
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import App from './App';
+import { render } from 'react-dom';
+import App from 'components/App';
 import { injectGlobal } from 'styled-components';
 import registerServiceWorker from './registerServiceWorker';
 
@@ -12,5 +12,6 @@ injectGlobal`
   }
 `;
 
-ReactDOM.render(<App />, document.getElementById('root') as HTMLElement);
+const root = document.getElementById('root') as HTMLElement;
+render(<App />, root);
 registerServiceWorker();

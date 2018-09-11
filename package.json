@@ -51,6 +51,7 @@
     "@types/storybook__react": "^3.0.9",
     "@types/styled-components": "^3.0.0",
     "babel-core": "^6.26.3",
+    "babel-plugin-require-context-hook": "^1.0.0",
     "babel-plugin-styled-components": "^1.6.4",
     "babel-runtime": "^6.26.0",
     "concurrently": "^4.0.1",
