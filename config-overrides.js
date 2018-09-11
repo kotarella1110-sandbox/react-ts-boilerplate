@@ -1,6 +1,7 @@
 const { compose } = require('react-app-rewired');
 const rewireStyledComponents = require('react-app-rewire-styled-components');
 const rewireStyledComponentsTypescriptPlugin = require('react-app-rewire-styled-components-typescript');
+const StyleLintPlugin = require('stylelint-webpack-plugin');
 const paths = require('react-scripts-ts/config/paths');
 
 const rewireTslint = (options = {}) => (config, env) => {
@@ -17,10 +18,30 @@ const rewireTslint = (options = {}) => (config, env) => {
   return config;
 };
 
+// not working
+const rewireStylelint = (options = {}) => (config, env) => {
+  config.plugins = (config.plugins || []).concat([
+    new StyleLintPlugin(Object.assign({}, options))
+  ]);
+
+  return config;
+};
+
 module.exports = compose(
   rewireStyledComponentsTypescriptPlugin,
   rewireStyledComponents,
-  rewireTslint({
+  // rewireTslint({
+  //   emitErrors: false,
+  //   fix: true,
+  // }),
+  rewireStylelint({
+    files: [
+      'public/**/*.css',
+      'public/index.html',
+    ],
     fix: true,
+  }),
+  rewireStylelint({
+    files: ['src/**/*.ts{,x}'],
   }),
 );
