@@ -31,10 +31,9 @@ module.exports.webpack = () => {
   compose(
     rewireStyledComponentsTypescriptPlugin,
     rewireStyledComponents,
-    // rewireTslint({
-    //   emitErrors: false,
-    //   fix: true,
-    // }),
+    rewireTslint({
+      fix: true,
+    }),
     rewireStylelint({
       files: [
         'public/**/*.css',
