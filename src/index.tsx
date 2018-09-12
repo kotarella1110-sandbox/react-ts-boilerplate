@@ -1,8 +1,9 @@
 import * as React from 'react';
 import { render } from 'react-dom';
+import { injectGlobal, ThemeProvider } from 'styled';
+import theme from 'components/theme';
 import App from 'components/App';
-import { injectGlobal } from 'styled-components';
-import registerServiceWorker from './registerServiceWorker';
+import registerServiceWorker from 'registerServiceWorker';
 
 injectGlobal`
   body {
@@ -12,6 +13,12 @@ injectGlobal`
   }
 `;
 
+const Root = () => (
+  <ThemeProvider theme={theme}>
+    <App />
+  </ThemeProvider>
+);
+
 const root = document.getElementById('root') as HTMLElement;
-render(<App />, root);
+render(<Root />, root);
 registerServiceWorker();
