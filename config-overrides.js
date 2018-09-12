@@ -58,6 +58,7 @@ module.exports.jest = (config) => {
           fileName: false,
         },
       ],
+      'require-context-hook',
     ],
   };
   return config;
