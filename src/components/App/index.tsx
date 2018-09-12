@@ -41,11 +41,15 @@ const AppIntro = styled.p`
   }
 `;
 
-const App: React.SFC<{}> = () => (
+export interface Props {
+  title: string;
+}
+
+const App: React.SFC<Props> = ({ title }) => (
   <AppWrapper>
     <AppHeader>
       <AppLogo src={logo} alt="logo" />
-      <AppTitle>Welcome to React</AppTitle>
+      <AppTitle>{title}</AppTitle>
     </AppHeader>
     <AppIntro>
       To get started, edit <code>src/App/index.tsx</code> and save to reload.

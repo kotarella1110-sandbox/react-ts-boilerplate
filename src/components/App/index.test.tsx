@@ -2,17 +2,27 @@ import * as React from 'react';
 import { shallow } from 'enzyme';
 import App from 'components/App';
 
-it('renders without crashing', () => {
-  shallow(<App />);
-});
+const setup = () => {
+  const props = {
+    title: 'Welcome to React',
+  };
 
-it('renders welcome message', () => {
-  const wrapper = shallow(<App />);
-  const welcome = 'Welcome to React';
-  expect(
-    wrapper
-      .find('AppTitle')
-      .children()
-      .text()
-  ).toBe(welcome);
+  const wrapper = shallow(<App {...props} />);
+
+  return {
+    wrapper,
+  };
+};
+
+describe('App', () => {
+  it('renders welcome message', () => {
+    const { wrapper } = setup();
+    const welcome = 'Welcome to React';
+    expect(
+      wrapper
+        .find('AppTitle')
+        .children()
+        .text()
+    ).toBe(welcome);
+  });
 });

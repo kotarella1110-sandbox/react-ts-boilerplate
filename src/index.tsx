@@ -15,7 +15,7 @@ injectGlobal`
 
 const Root = () => (
   <ThemeProvider theme={theme}>
-    <App />
+    <App title="Welcome to React" />
   </ThemeProvider>
 );
 

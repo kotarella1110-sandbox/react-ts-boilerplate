@@ -19,5 +19,7 @@ storiesOf('App Group/App', module)
   .addDecorator(withKnobs)
   .addWithJSX(
     'Welcome to Storybook',
-    withNotes('note about App component, supports markdown')(() => <App />)
+    withNotes('note about App component, supports markdown')(() => (
+      <App title="Welcome to React" />
+    ))
   );
