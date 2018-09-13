@@ -44,7 +44,7 @@ exports[`Storyshots App Group/App Welcome to Storybook 1`] = `
     <img
       alt="logo"
       className="c2"
-      src="logo.svg"
+      src="test-file-stub"
     />
     <h1
       className="c3"
